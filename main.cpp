@@ -198,11 +198,11 @@ Part 1b - Step 2: Assignment
 
 Thing 1) Music Festival
 5 properties:
-    1) number of sold tickets
-    2) number of artists
-    3) duration in days for the festival
-    4) concert average duration
-    5) water cost
+    1) number of sold tickets (int)
+    2) number of artists (int)
+    3) duration in days for the festival (int)
+    4) concert average duration (float)
+    5) water cost (double)
 3 things it can do:
     1) check the ticket type
     2) announce next artist
@@ -210,11 +210,11 @@ Thing 1) Music Festival
 
 Thing 2) Digital Audio Workstation
 5 properties:
-    1) volume value
-    2) number of tracks
-    3) panning value
-    4) type of track
-    5) cost for the software
+    1) volume value (float)
+    2) number of tracks (int)
+    3) panning value (double)
+    4) type of track (std::string)
+    5) cost for the software (double)
 3 things it can do:
     1) add a new track
     2) increase volume of tracks
@@ -222,11 +222,11 @@ Thing 2) Digital Audio Workstation
 
 Thing 3) Train station
 5 properties:
-    1) number of rails
-    2) number of trains per day
-    3) travelers rate
-    4) number of intercity trains
-    5) number of national trains
+    1) number of rails (int)
+    2) number of trains per day (int)
+    3) travelers rate (double)
+    4) number of intercity trains (int)
+    5) number of national trains (int)
 3 things it can do:
     1) check trains' arrivals
     2) announce delays
@@ -234,11 +234,11 @@ Thing 3) Train station
 
 Thing 4) Notebook
 5 properties:
-    1) ram size
-    2) graphic card size
-    3) number of CPU cores
-    4) model name
-    5) number of USB ports
+    1) ram size (int)
+    2) graphic card size (int)
+    3) number of CPU cores (int)
+    4) model name (std::string)
+    5) number of USB ports (int)
 3 things it can do:
     1) run newest videogames
     2) connect to the internet
