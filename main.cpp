@@ -196,53 +196,53 @@ Part 1b - Step 2: Assignment
         c) pick properties that can eventually be represented with 
         'int float double bool char std::string'.
 
-Thing 1)
+Thing 1) Music Festival
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) number of sold tickets
+    2) number of artists
+    3) duration in days for the festival
+    4) concert average duration
+    5) water cost
 3 things it can do:
-    1)
-    2)
-    3)
+    1) check the ticket type
+    2) announce next artist
+    3) reserve a parking spot
 
-Thing 2)
+Thing 2) Digital Audio Workstation
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) volume value
+    2) number of tracks
+    3) panning value
+    4) type of track
+    5) cost for the software
 3 things it can do:
-    1)
-    2)
-    3)
+    1) add a new track
+    2) increase volume of tracks
+    3) solos a given track
 
-Thing 3)
+Thing 3) Train station
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) number of rails
+    2) number of trains per day
+    3) travelers rate
+    4) number of intercity trains
+    5) number of national trains
 3 things it can do:
-    1)
-    2)
-    3)
+    1) check trains' arrivals
+    2) announce delays
+    3) control travelers access
 
-Thing 4)
+Thing 4) Notebook
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) ram size
+    2) graphic card size
+    3) number of CPU cores
+    4) model name
+    5) number of USB ports
 3 things it can do:
-    1)
-    2)
-    3)
+    1) run newest videogames
+    2) connect to the internet
+    3) auto update
 */
 
 /*
