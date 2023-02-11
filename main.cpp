@@ -436,11 +436,11 @@ example:
 
 Thing 5) HandleBar
 5 properties:
-    1) material
-    2) number of breaks
-    3) speed indicator in Km/h
-    4) fuel indicator in percentage
-    5) hour indicator
+    1) material (std::string)
+    2) number of breaks (int)
+    3) speed indicator in Km/h (int)
+    4) fuel indicator in percentage (int)
+    5) hour indicator (std::string)
 3 things it can do:
     1) accelerate
     2) break
@@ -448,11 +448,11 @@ Thing 5) HandleBar
 
 Thing 6) Wheel
 5 properties:
-    1) material
-    2) wheel rim type
-    3) maximum pressure in bar
-    4) colour
-    5) percentage of wear
+    1) material (std::string)
+    2) wheel rim type (std::string)
+    3) maximum pressure in bar (float)
+    4) colour (std::string)
+    5) percentage of wear (float)
 3 things it can do:
     1) loose pressure
     2) bounce
@@ -460,11 +460,11 @@ Thing 6) Wheel
 
 Thing 7) Seat
 5 properties:
-    1) material
-    2) shape
-    3) number
-    4) colour
-    5) percentage of cushioning
+    1) material (std::string)
+    2) shape (std::string)
+    3) number (int)
+    4) colour (std::string)
+    5) percentage of cushioning (float)
 3 things it can do:
     1) absorb vibrations
     2) cover objects holder
@@ -472,11 +472,11 @@ Thing 7) Seat
 
 Thing 8) Light
 5 properties:
-    1) wattage
-    2) brightness percentage
-    3) colour
-    4) light anglulation in degrees
-    5) type of light
+    1) wattage (float)
+    2) brightness percentage (double)
+    3) colour (std::string)
+    4) light anglulation in degrees (int)
+    5) type of light (std::string)
 3 things it can do:
     1) illuminate street
     2) alert people
@@ -484,11 +484,11 @@ Thing 8) Light
 
 Thing 9) Case
 5 properties:
-    1) shape
-    2) colour
-    3) material
-    4) maximum load in Kg
-    5) volume
+    1) shape (std::string)
+    2) colour (std::string)
+    3) material (std::string)
+    4) maximum load in Kg (float)
+    5) volume (float)
 3 things it can do:
     1) carry objects
     2) support passenger
