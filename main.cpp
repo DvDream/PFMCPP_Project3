@@ -446,10 +446,15 @@ struct MusicFestival
 {
     //5 properties:
     //    1) number of sold tickets (int)
+    int soldTickets = 10000;
     //    2) number of artists (int)
+    int numberOfArtists = 12;
     //    3) duration in days for the festival (int)
+    int numberOfFestivalDays = 3;
     //    4) concert average duration (float)
+    float averageConcertsDuration = 8.5f;
     //    5) water cost (double)
+    double waterCost = 4.5;
     //3 things it can do:
     //    1) check the ticket type
     //    2) announce next artist
@@ -473,10 +478,15 @@ struct DigitalAudioWorkstation
 {
     //5 properties:
     //    1) volume value (float)
+    float volumeValue = 3.5f;
     //    2) number of tracks (int)
+    int numberOfTracks = 1;
     //    3) panning value (double)
+    double panValue = 0.0;
     //    4) type of track (std::string)
+    std::string trackType = "midi";
     //    5) cost for the software (double)
+    double softwareCost = 299.99;
     //3 things it can do:
     //    1) add a new track
     //    2) increase volume of tracks
@@ -500,10 +510,15 @@ struct TrainStation
 {
     //5 properties:
     //    1) number of rails (int)
+    int numberOfRails = 20;
     //    2) number of trains per day (int)
+    int trainsPerDay = 200; 
     //    3) travelers rate (double)
+    double travelersRate = 80.2;
     //    4) number of intercity trains (int)
+    int numberOfIntercityTrains = 10;
     //    5) number of national trains (int)
+    int numberOfNationalTrains = 10;
     //3 things it can do:
     //    1) check trains' arrivals
     //    2) announce delays
@@ -527,10 +542,15 @@ struct Notebook
 {
     //5 properties:
     //    1) ram size (int)
+    int ramSize = 4096;
     //    2) graphic card size (int)
+    int graphicCardSize = 2048;
     //    3) number of CPU cores (int)
+    int numberOfCpuCores = 4;
     //    4) model name (std::string)
+    std::string modelName = "Lenovo ThinkPad";
     //    5) number of USB ports (int)
+    int numberOfUsbPorts = 3;
     //3 things it can do:
     //    1) run newest videogames
     //    2) connect to the internet
@@ -554,10 +574,15 @@ struct HandleBar
 {
     //5 properties:
     //    1) material (std::string)
+    std::string material = "plastic";
     //    2) number of breaks (int)
+    int numberOfBreaks = 2;
     //    3) speed indicator in Km/h (int)
+    int speedIndication = 0;
     //    4) fuel indicator in percentage (int)
+    int fuelPercentage = 50;
     //    5) hour indicator (std::string)
+    std::string hourIndication = "00:00:00";
     //3 things it can do:
     //    1) accelerate
     //    2) break
@@ -581,10 +606,15 @@ struct Wheel
 {
     //5 properties:
     //    1) material (std::string)
+    std::string material = "rubber";
     //    2) wheel rim type (std::string)
+    std::string rimType = "aluminum";
     //    3) maximum pressure in bar (float)
+    float maxBarPressure = 6.2f;
     //    4) colour (std::string)
+    std::string colour = "black";
     //    5) percentage of wear (float)
+    float wearPercentage = 0.0f;
     //3 things it can do:
     //    1) loose pressure
     //    2) bounce
@@ -608,10 +638,15 @@ struct Seat
 {
     //5 properties:
     //    1) material (std::string)
+    std::string material = "leather";
     //    2) shape (std::string)
+    std::string shape = "rounded";
     //    3) number (int)
+    int numberOfSeats = 1;
     //    4) colour (std::string)
+    std::string colour = "black";
     //    5) percentage of cushioning (float)
+    float cushioningPercentage = 90.0f;
     //3 things it can do:
     //    1) absorb vibrations
     //    2) cover objects holder
@@ -635,10 +670,15 @@ struct Light
 {
     //5 properties:
     //    1) wattage (float)
+    float wattage = 60.0f;
     //    2) brightness percentage (double)
+    double brightnessPercentage = 80.5;
     //    3) colour (std::string)
+    std::string colour = "white";
     //    4) light anglulation in degrees (int)
+    int degreesAngulation = 90;
     //    5) type of light (std::string)
+    std::string type = "halogen";
     //3 things it can do:
     //    1) illuminate street
     //    2) alert people
@@ -662,10 +702,15 @@ struct Case
 {
     //5 properties:
     //    1) shape (std::string)
+    std::string shape = "squared";
     //    2) colour (std::string)
+    std::string colour = "red";
     //    3) material (std::string)
+    std::string material = "plastic";
     //    4) maximum load in Kg (float)
-    //    5) volume (float)
+    float maximumKgLoad = 2.8f;
+    //    5) volume in litres (float)
+    float volumeInLitres = 46.2f;
     //3 things it can do:
     //    1) carry objects
     //    2) support passenger
@@ -689,10 +734,15 @@ struct Scooter
 {
     //5 properties:
     //    1) HandleBar
+    HandleBar handleBar;
     //    2) Wheel
+    Wheel wheel;
     //    3) Seat
+    Seat seat;
     //    4) Light
+    Light light;
     //    5) Case
+    Case scooterCase; //cannot use "case" as object name
     //3 things it can do:
     //    1) accelerate
     //    2) brake
