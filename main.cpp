@@ -480,7 +480,16 @@ Thing 3) Train station
 */
 struct TrainStation
 {
-
+    //5 properties:
+    //    1) number of rails (int)
+    //    2) number of trains per day (int)
+    //    3) travelers rate (double)
+    //    4) number of intercity trains (int)
+    //    5) number of national trains (int)
+    //3 things it can do:
+    //    1) check trains' arrivals
+    //    2) announce delays
+    //    3) control travelers access
 };
 
 /*
@@ -498,7 +507,16 @@ Thing 4) Notebook
 */
 struct Notebook
 {
-
+    //5 properties:
+    //    1) ram size (int)
+    //    2) graphic card size (int)
+    //    3) number of CPU cores (int)
+    //    4) model name (std::string)
+    //    5) number of USB ports (int)
+    //3 things it can do:
+    //    1) run newest videogames
+    //    2) connect to the internet
+    //    3) auto update
 };
 
 /*
@@ -516,7 +534,16 @@ Thing 5) HandleBar
 */
 struct HandleBar
 {
-
+    //5 properties:
+    //    1) material (std::string)
+    //    2) number of breaks (int)
+    //    3) speed indicator in Km/h (int)
+    //    4) fuel indicator in percentage (int)
+    //    5) hour indicator (std::string)
+    //3 things it can do:
+    //    1) accelerate
+    //    2) break
+    //    3) steer
 };
 
 /*
@@ -534,7 +561,16 @@ Thing 6) Wheel
 */
 struct Wheel
 {
-
+    //5 properties:
+    //    1) material (std::string)
+    //    2) wheel rim type (std::string)
+    //    3) maximum pressure in bar (float)
+    //    4) colour (std::string)
+    //    5) percentage of wear (float)
+    //3 things it can do:
+    //    1) loose pressure
+    //    2) bounce
+    //    3) spin
 };
 
 /*
@@ -552,7 +588,16 @@ Thing 7) Seat
 */
 struct Seat
 {
-
+    //5 properties:
+    //    1) material (std::string)
+    //    2) shape (std::string)
+    //    3) number (int)
+    //    4) colour (std::string)
+    //    5) percentage of cushioning (float)
+    //3 things it can do:
+    //    1) absorb vibrations
+    //    2) cover objects holder
+    //    3) comfort driver    
 };
 
 /*
@@ -570,7 +615,16 @@ Thing 8) Light
 */
 struct Light
 {
-
+    //5 properties:
+    //    1) wattage (float)
+    //    2) brightness percentage (double)
+    //    3) colour (std::string)
+    //    4) light anglulation in degrees (int)
+    //    5) type of light (std::string)
+    //3 things it can do:
+    //    1) illuminate street
+    //    2) alert people
+    //    3) indicate change of direction
 };
 
 /*
@@ -588,7 +642,16 @@ Thing 9) Case
 */
 struct Case
 {
-
+    //5 properties:
+    //    1) shape (std::string)
+    //    2) colour (std::string)
+    //    3) material (std::string)
+    //    4) maximum load in Kg (float)
+    //    5) volume (float)
+    //3 things it can do:
+    //    1) carry objects
+    //    2) support passenger
+    //    3) reflect lights
 };
 
 /*
@@ -606,7 +669,16 @@ Thing 10) Scooter
 */
 struct Scooter
 {
-
+    //5 properties:
+    //    1) HandleBar
+    //    2) Wheel
+    //    3) Seat
+    //    4) Light
+    //    5) Case
+    //3 things it can do:
+    //    1) accelerate
+    //    2) brake
+    //    3) steer
 };
 
 /*
