@@ -444,7 +444,16 @@ Thing 1) Music Festival
 */
 struct MusicFestival
 {
-
+    //5 properties:
+    //    1) number of sold tickets (int)
+    //    2) number of artists (int)
+    //    3) duration in days for the festival (int)
+    //    4) concert average duration (float)
+    //    5) water cost (double)
+    //3 things it can do:
+    //    1) check the ticket type
+    //    2) announce next artist
+    //    3) reserve a parking spot
 };
 
 /*
@@ -462,7 +471,16 @@ Thing 2) Digital Audio Workstation
 */
 struct DigitalAudioWorkstation
 {
-
+    //5 properties:
+    //    1) volume value (float)
+    //    2) number of tracks (int)
+    //    3) panning value (double)
+    //    4) type of track (std::string)
+    //    5) cost for the software (double)
+    //3 things it can do:
+    //    1) add a new track
+    //    2) increase volume of tracks
+    //    3) solos a given track
 };
 
 /*
