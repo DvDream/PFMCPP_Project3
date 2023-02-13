@@ -441,7 +441,13 @@ Thing 1) Music Festival
     1) check the ticket type
     2) announce next artist
     3) reserve a parking spot
+*/
+struct MusicFestival
+{
 
+};
+
+/*
 Thing 2) Digital Audio Workstation
 5 properties:
     1) volume value (float)
@@ -453,7 +459,13 @@ Thing 2) Digital Audio Workstation
     1) add a new track
     2) increase volume of tracks
     3) solos a given track
+*/
+struct DigitalAudioWorkstation
+{
 
+};
+
+/*
 Thing 3) Train station
 5 properties:
     1) number of rails (int)
@@ -465,7 +477,13 @@ Thing 3) Train station
     1) check trains' arrivals
     2) announce delays
     3) control travelers access
+*/
+struct TrainStation
+{
 
+};
+
+/*
 Thing 4) Notebook
 5 properties:
     1) ram size (int)
@@ -477,7 +495,13 @@ Thing 4) Notebook
     1) run newest videogames
     2) connect to the internet
     3) auto update
+*/
+struct Notebook
+{
 
+};
+
+/*
 Thing 5) HandleBar
 5 properties:
     1) material (std::string)
@@ -489,7 +513,13 @@ Thing 5) HandleBar
     1) accelerate
     2) break
     3) steer
+*/
+struct HandleBar
+{
 
+};
+
+/*
 Thing 6) Wheel
 5 properties:
     1) material (std::string)
@@ -501,7 +531,13 @@ Thing 6) Wheel
     1) loose pressure
     2) bounce
     3) spin
+*/
+struct Wheel
+{
 
+};
+
+/*
 Thing 7) Seat
 5 properties:
     1) material (std::string)
@@ -513,7 +549,13 @@ Thing 7) Seat
     1) absorb vibrations
     2) cover objects holder
     3) comfort driver
+*/
+struct Seat
+{
 
+};
+
+/*
 Thing 8) Light
 5 properties:
     1) wattage (float)
@@ -525,7 +567,13 @@ Thing 8) Light
     1) illuminate street
     2) alert people
     3) indicate change of direction
+*/
+struct Light
+{
 
+};
+
+/*
 Thing 9) Case
 5 properties:
     1) shape (std::string)
@@ -537,7 +585,13 @@ Thing 9) Case
     1) carry objects
     2) support passenger
     3) reflect lights
+*/
+struct Case
+{
 
+};
+
+/*
 Thing 10) Scooter
 5 properties:
     1) HandleBar
@@ -550,11 +604,10 @@ Thing 10) Scooter
     2) brake
     3) steer
 */
+struct Scooter
+{
 
-
-
-
-
+};
 
 /*
 =================
