@@ -457,8 +457,12 @@ struct MusicFestival
     double waterCost = 4.5;
     //3 things it can do:
     //    1) check the ticket type
+    void checkTicketType();
     //    2) announce next artist
+    void announceNextArtist(std::string currentArtist); // this parameters is used to check inside an inner list of artists
     //    3) reserve a parking spot
+    int reserveParkingSpot(float payment);
+    // the payment is needed to calculate the duration for the parking spot. The function returns this duration in minutes.
 };
 
 /*
@@ -489,8 +493,11 @@ struct DigitalAudioWorkstation
     double softwareCost = 299.99;
     //3 things it can do:
     //    1) add a new track
+    void addNewTrack(int trackType); // trackType could range from 0 to whatever number to select the type of track (audio, midi, ecc..)
     //    2) increase volume of tracks
+    float increaseVolume(int newVolumeValue); // returns the updated volumeValue
     //    3) solos a given track
+    bool soloTrack(int trackNumber); // uses the track number as parameter to isolate it. It returns true/false if it has been isolated
 };
 
 /*
@@ -521,8 +528,11 @@ struct TrainStation
     int numberOfNationalTrains = 10;
     //3 things it can do:
     //    1) check trains' arrivals
+    void checkTrainsArrivals();
     //    2) announce delays
+    void announceDelays(int trainId, int delayMinutesAmount); // parameters to select the train and its delay in minutes
     //    3) control travelers access
+    bool controlTravelersAccess(int ticketId); // based on ticketId, return true if the traveler payed it so that can access the trainStation 
 };
 
 /*
@@ -553,8 +563,11 @@ struct Notebook
     int numberOfUsbPorts = 3;
     //3 things it can do:
     //    1) run newest videogames
+    void runNewestVideogames(bool minimumRequirementsChecked); // run the videogame upon minimumRequirementsChecked value
     //    2) connect to the internet
+    bool connectToInternet(std::string networkName, std::string password); // return true if the password for the given network name is correct
     //    3) auto update
+    void autoUpdate();
 };
 
 /*
@@ -567,7 +580,7 @@ Thing 5) HandleBar
     5) hour indicator (std::string)
 3 things it can do:
     1) accelerate
-    2) break
+    2) brake
     3) steer
 */
 struct HandleBar
@@ -585,8 +598,11 @@ struct HandleBar
     std::string hourIndication = "00:00:00";
     //3 things it can do:
     //    1) accelerate
-    //    2) break
+    int accelerate(int accelerationAmount); // return an updated speedIndication value given an acceleration amount as parameter
+    //    2) brake
+    int brakeOfAGivenAmount(int brakingAmount); // return an updated speedIndication value given braking amount as parameter
     //    3) steer
+    void steer(std::string direction); // steer based on direction that could be for example right or left
 };
 
 /*
@@ -617,8 +633,11 @@ struct Wheel
     float wearPercentage = 0.0f;
     //3 things it can do:
     //    1) loose pressure
+    void loosePressure(float pressureAmount); // loose pressure of a given pressure amount
     //    2) bounce
+    void bounce();
     //    3) spin
+    void spin(int revolutionsPerMinute); // set the revolution per minute to make the wheel spinning
 };
 
 /*
@@ -649,8 +668,11 @@ struct Seat
     float cushioningPercentage = 90.0f;
     //3 things it can do:
     //    1) absorb vibrations
+    void absorbVibrations();
     //    2) cover objects holder
-    //    3) comfort driver    
+    void coverObjectsHolder();
+    //    3) comfort driver   
+    void comfortDriver();
 };
 
 /*
@@ -681,8 +703,11 @@ struct Light
     std::string type = "halogen";
     //3 things it can do:
     //    1) illuminate street
+    double illuminateStreet(double brightnessAmount); // Based upon the brightness amount, it returns the updated brightness percentage
     //    2) alert people
+    void alertPeople();
     //    3) indicate change of direction
+    std::string changeDirection(int direction); // direction could be 1 or 2 to indicate left or right. It returns the direction as a string.
 };
 
 /*
@@ -713,8 +738,11 @@ struct Case
     float volumeInLitres = 46.2f;
     //3 things it can do:
     //    1) carry objects
+    void carryObjects(std::string objectName); // the case internally stores the object passed as a parameter
     //    2) support passenger
+    void supportPassenger();
     //    3) reflect lights
+    void reflectLights();
 };
 
 /*
@@ -745,8 +773,11 @@ struct Scooter
     Case scooterCase; //cannot use "case" as object name
     //3 things it can do:
     //    1) accelerate
+    int accelerate(int accelerationAmount); // returns the updated speed based on the acceleration amount parameter
     //    2) brake
+    int brake(int brakeAmount); // returns the updated speed based on the brake amount parameter
     //    3) steer
+    void steer();
 };
 
 /*
