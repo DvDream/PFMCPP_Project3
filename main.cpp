@@ -789,14 +789,19 @@ struct Scooter
 {
     //5 properties:
     //    1) HandleBar
+    //a member variabledeclaration of an instance of UDT 5
     HandleBar handleBar;
     //    2) Wheel
+    //a member variabledeclaration of an instance of UDT 6
     Wheel wheel;
     //    3) Seat
+    //a member variabledeclaration of an instance of UDT 7
     Seat seat;
     //    4) Light
+    //a member variabledeclaration of an instance of UDT 8
     Light light;
     //    5) Case
+    //a member variabledeclaration of an instance of UDT 9
     Case scooterCase; //cannot use "case" as object name
     //3 things it can do:
     //    1) accelerate
