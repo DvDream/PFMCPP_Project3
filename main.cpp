@@ -498,19 +498,19 @@ struct DigitalAudioWorkstation
         std::string actualTimelinePoint = "00h:00m:00s";
         double gainValue = 1.0;
         double skipTimeValue = 0.5;
-        bool isMuted = false;
+        bool isIsolated = false;
 
-        void setLoop(std::string startTime = "00h::01m::34s", std::string endTime); //play a track from a given list and given the index and selecting a given time. It returns the index of the current playing track
+        void setLoop(std::string startTime = "00h::01m::34s", std::string endTime = "00h::01m::40s"); //play a track from a given list and given the index and selecting a given time. It returns the index of the current playing track
         void recordTrack(std::string startTime = "00h::00m::00s");
         double changeGain(double actualGainValue, double addingValue = 0.5); // change the actualVolume by adding an addingValue. It returns the updated volume. 
     };
     //3 things it can do:
     //    1) add a new track
-    void addNewTrack(int trackType); // trackType could range from 0 to whatever number to select the type of track (audio, midi, ecc..)
+    void addNewTrack(int trackType, TrackSlot trackSlot); // trackType could range from 0 to whatever number to select the type of track (audio, midi, ecc..)
     //    2) increase volume of tracks
     float increaseVolume(int newVolumeValue); // returns the updated volumeValue
     //    3) solos a given track
-    bool soloTrack(int trackNumber); // uses the track number as parameter to isolate it. It returns true/false if it has been isolated
+    bool soloTrack(int trackNumber, TrackSlot trackSlot); // uses the track number as parameter to isolate it. It returns true/false if it has been isolated
 };
 
 /*
@@ -555,9 +555,9 @@ struct TrainStation
     };
     //3 things it can do:
     //    1) check trains' arrivals
-    void checkTrainsArrivals();
+    void checkTrainsArrivals(Train train);
     //    2) announce delays
-    void announceDelays(int trainId, int delayMinutesAmount); // parameters to select the train and its delay in minutes
+    void announceDelays(int trainId, int delayMinutesAmount, Train train); // parameters to select the train and its delay in minutes
     //    3) control travelers access
     bool controlTravelersAccess(int ticketId); // based on ticketId, return true if the traveler payed it so that can access the trainStation 
 };
