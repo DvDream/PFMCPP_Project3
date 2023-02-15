@@ -491,6 +491,19 @@ struct DigitalAudioWorkstation
     std::string trackType = "midi";
     //    5) cost for the software (double)
     double softwareCost = 299.99;
+
+    struct TrackSlot
+    {
+        bool isTrackPaused = true;
+        std::string actualTimelinePoint = "00h:00m:00s";
+        double gainValue = 1.0;
+        double skipTimeValue = 0.5;
+        bool isMuted = false;
+
+        void setLoop(std::string startTime = "00h::01m::34s", std::string endTime); //play a track from a given list and given the index and selecting a given time. It returns the index of the current playing track
+        void recordTrack(std::string startTime = "00h::00m::00s");
+        double changeGain(double actualGainValue, double addingValue = 0.5); // change the actualVolume by adding an addingValue. It returns the updated volume. 
+    };
     //3 things it can do:
     //    1) add a new track
     void addNewTrack(int trackType); // trackType could range from 0 to whatever number to select the type of track (audio, midi, ecc..)
@@ -526,6 +539,20 @@ struct TrainStation
     int numberOfIntercityTrains = 10;
     //    5) number of national trains (int)
     int numberOfNationalTrains = 10;
+
+    struct Train
+    {
+        int numberOfWagons = 12;
+        int numberOfSeats = 120;
+        int trainId = 123;
+        bool hasArrived = false;
+        float fuelPercentage = 100.0f;
+
+        void leaveStation(float fuelPercentage, bool setAutoPilot = false); // Function to indicate that the train has to leave the station. It accepts fuelPercetnage parameter to check that it can actually leave and if it need to turn the Autopilot on. 
+        double DayMilesTraveled(std::string day); // return the mailes traveled in a given day
+        void openTheDoors(float velocity = 100.0f); // open the doors given a certain velocity (hopefully 0).     
+        
+    };
     //3 things it can do:
     //    1) check trains' arrivals
     void checkTrainsArrivals();
