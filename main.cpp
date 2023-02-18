@@ -1008,7 +1008,7 @@ struct TrainStation
         float fuelPercentage = 100.0f;
 
         void leaveStation(float fuelPercentage, bool setAutoPilot = false); // Function to indicate that the train has to leave the station. It accepts fuelPercetnage parameter to check that it can actually leave and if it need to turn the Autopilot on. 
-        double DayMilesTraveled(std::string day); // return the mailes traveled in a given day
+        double computeMilesTraveledPerDay(std::string day); // return the mailes traveled in a given day
         void openTheDoors(float velocity = 100.0f); // open the doors given a certain velocity (hopefully 0).     
         
     };
@@ -1066,7 +1066,7 @@ Thing 5) HandleBar
     5) hour indicator (std::string)
 3 things it can do:
     1) accelerate
-    2) brake
+    2) decelerate
     3) steer
 */
 struct HandleBar
@@ -1085,8 +1085,8 @@ struct HandleBar
     //3 things it can do:
     //    1) accelerate
     int accelerate(int accelerationAmount); // return an updated speedIndication value given an acceleration amount as parameter
-    //    2) brake
-    int brakeOfAGivenAmount(int brakingAmount); // return an updated speedIndication value given braking amount as parameter
+    //    2) decelerate
+    int decelerate(int decelerationAmount); // return an updated speedIndication value given decelerationAmount as parameter
     //    3) steer
     void steer(std::string direction); // steer based on direction that could be for example right or left
 };
@@ -1136,7 +1136,7 @@ Thing 7) Seat
     5) percentage of cushioning (float)
 3 things it can do:
     1) absorb vibrations
-    2) cover objects holder
+    2) it can warm the seating during the travel
     3) comfort driver
 */
 struct Seat
@@ -1155,8 +1155,8 @@ struct Seat
     //3 things it can do:
     //    1) absorb vibrations
     void absorbVibrations();
-    //    2) cover objects holder
-    void coverObjectsHolder();
+    //    2) it can warm the seating during the travel
+    bool isWarmingTheSeating();
     //    3) comfort driver   
     void comfortDriver();
 };
@@ -1193,7 +1193,7 @@ struct Light
     //    2) alert people
     void alertPeople();
     //    3) indicate change of direction
-    std::string changeDirection(int direction); // direction could be 1 or 2 to indicate left or right. It returns the direction as a string.
+    std::string indicateDirection(int direction); // direction could be 1 or 2 to indicate left or right. It returns the direction as a string.
 };
 
 /*
@@ -1241,7 +1241,7 @@ Thing 10) Scooter
     5) Case
 3 things it can do:
     1) accelerate
-    2) brake
+    2) decelerate
     3) steer
 */
 struct Scooter
@@ -1265,8 +1265,8 @@ struct Scooter
     //3 things it can do:
     //    1) accelerate
     int accelerate(int accelerationAmount); // returns the updated speed based on the acceleration amount parameter
-    //    2) brake
-    int brake(int brakeAmount); // returns the updated speed based on the brake amount parameter
+    //    2) decelerate
+    int decelerate(int decelerationAmount); // returns the updated speed based on the decelerationAmount parameter
     //    3) steer
     void steer();
 };
