@@ -959,17 +959,18 @@ struct DigitalAudioWorkstation
         double skipTimeValue = 0.5;
         bool isIsolated = false;
 
-        void setLoop(std::string startTime = "00h::01m::34s", std::string endTime = "00h::01m::40s"); //play a track from a given list and given the index and selecting a given time. It returns the index of the current playing track
-        void recordTrack(std::string startTime = "00h::00m::00s");
-        double changeGain(double actualGainValue, double addingValue = 0.5); // change the actualVolume by adding an addingValue. It returns the updated volume. 
+        void setLoopRange(std::string startTime = "00h::01m::34s", std::string endTime = "00h::01m::40s"); // set the range for the loop 
+        
+        void recordTrack(std::string startTime = "00h::00m::00s"); //record a track from a give start time value.
+        double changeGain(double actualGainValue, double addingValue = 0.5); // change the actualGainValue by adding an addingValue. It returns the updated gain. 
     };
     //3 things it can do:
     //    1) add a new track
-    void addNewTrack(int trackType, TrackSlot trackSlot); // trackType could range from 0 to whatever number to select the type of track (audio, midi, ecc..)
+    void addNewTrack(int trackType, TrackSlot trackSlot); // trackType could range from 0 to whatever number to select the type of track (audio, midi, ecc..). You give to the function a new trackSlot with all its characteristics.
     //    2) increase volume of tracks
-    float increaseVolume(int newVolumeValue); // returns the updated volumeValue
+    float increaseTracksVolume(int newVolumeValue); // returns the updated volumeValue
     //    3) solos a given track
-    bool soloTrack(int trackNumber, TrackSlot trackSlot); // uses the track number as parameter to isolate it. It returns true/false if it has been isolated
+    bool soloTrack(int trackNumber, TrackSlot trackSlot); // uses the track number as parameter to isolate it and the trackSlot to set the isIsolated value to true/false. It returns true/false if it has been isolated
 };
 
 /*
@@ -1007,7 +1008,7 @@ struct TrainStation
         bool hasArrived = false;
         float fuelPercentage = 100.0f;
 
-        void leaveStation(float fuelPercentage, bool setAutoPilot = false); // Function to indicate that the train has to leave the station. It accepts fuelPercetnage parameter to check that it can actually leave and if it need to turn the Autopilot on. 
+        void leaveStation(float fuelPercentage, bool setAutoPilot = false); // Function to indicate that the train has to leave the station. It accepts fuelPercentage parameter to check that it can actually leave and if it need to turn the Autopilot on. 
         double computeMilesTraveledPerDay(std::string day); // return the mailes traveled in a given day
         void openTheDoors(float velocity = 100.0f); // open the doors given a certain velocity (hopefully 0).     
         
@@ -1050,7 +1051,7 @@ struct Notebook
     //3 things it can do:
     //    1) run newest videogames
     void runNewestVideogames(bool minimumRequirementsChecked); // run the videogame upon minimumRequirementsChecked value
-    //    2) connect to the internet
+    //    2) connect to internet
     bool connectToInternet(std::string networkName, std::string password); // return true if the password for the given network name is correct
     //    3) auto update
     void autoUpdate();
@@ -1155,8 +1156,8 @@ struct Seat
     //3 things it can do:
     //    1) absorb vibrations
     void absorbVibrations();
-    //    2) it can warm the seating during the travel
-    bool isWarmingTheSeating();
+    //    2) it can warm the seating
+    bool isWarmingTheSeating(); // return true if the seat is warming the seating  during the travel
     //    3) comfort driver   
     void comfortDriver();
 };
@@ -1193,7 +1194,7 @@ struct Light
     //    2) alert people
     void alertPeople();
     //    3) indicate change of direction
-    std::string indicateDirection(int direction); // direction could be 1 or 2 to indicate left or right. It returns the direction as a string.
+    std::string indicateChangeOfDirection(int direction); // direction could be 1 or 2 to indicate left or right. It returns the direction as a string.
 };
 
 /*
@@ -1224,7 +1225,7 @@ struct Case
     float volumeInLitres = 46.2f;
     //3 things it can do:
     //    1) carry objects
-    void carryObjects(std::string objectName); // the case internally stores the object passed as a parameter
+    void carryObjects(std::string objectName); // the case internally stores the object passed as a string parameter
     //    2) support passenger
     void supportPassenger();
     //    3) reflect lights
@@ -1264,11 +1265,11 @@ struct Scooter
     Case scooterCase; //cannot use "case" as object name
     //3 things it can do:
     //    1) accelerate
-    int accelerate(int accelerationAmount); // returns the updated speed based on the acceleration amount parameter
+    int accelerate(int accelerationAmount); // returns the updated speed based on the accelerationAmount parameter
     //    2) decelerate
     int decelerate(int decelerationAmount); // returns the updated speed based on the decelerationAmount parameter
     //    3) steer
-    void steer();
+    void steer(std::string direction); // steer based on direction that could be for example right or left
 };
 
 
