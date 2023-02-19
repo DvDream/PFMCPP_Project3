@@ -959,8 +959,7 @@ struct DigitalAudioWorkstation
         double skipTimeValue = 0.5;
         bool isIsolated = false;
 
-        void setLoopRange(std::string startTime = "00h::01m::34s", std::string endTime = "00h::01m::40s"); // set the range for the loop 
-        
+        void setLoopRange(std::string startTime = "00h::01m::34s", std::string endTime = "00h::01m::40s"); // set the range for the loop
         void recordTrack(std::string startTime = "00h::00m::00s"); //record a track from a give start time value.
         double changeGain(double actualGainValue, double addingValue = 0.5); // change the actualGainValue by adding an addingValue. It returns the updated gain. 
     };
@@ -1137,7 +1136,7 @@ Thing 7) Seat
     5) percentage of cushioning (float)
 3 things it can do:
     1) absorb vibrations
-    2) it can warm the seating during the travel
+    2) it can warm the seating
     3) comfort driver
 */
 struct Seat
@@ -1157,7 +1156,7 @@ struct Seat
     //    1) absorb vibrations
     void absorbVibrations();
     //    2) it can warm the seating
-    bool isWarmingTheSeating(); // return true if the seat is warming the seating  during the travel
+    bool isWarmingTheSeating(); // return true if the seat is warming the seating
     //    3) comfort driver   
     void comfortDriver();
 };
