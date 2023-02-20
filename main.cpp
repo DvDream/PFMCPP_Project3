@@ -83,51 +83,51 @@ Main Object: Car Interior
         Name 4 nouns you'll find on the [Sub Object]
             1) paddle shifters
             2) 'cruise control' controls
-            3) 
-            4) 
+            3) horn
+            4) turn signal levers
         Name 2 actions that the [Sub Object] can do:
             1) adjust cruise control settings.
-            2)
+            2) indicate a turn to the right/left
         
     Sub Object: Instrument Cluster
         Name 4 nouns you'll find on the [Sub Object]
-            1)
-            2)
-            3)
-            4)
+            1) fuel level
+            2) speed indicator
+            3) oil level
+            4) gear indicator
         Name 3 actions that the [Sub Object] can do:
-            1)
-            2)
-            3)
+            1) indicates the level of fuel present
+            2) indicates the actual speed
+            3) visualizes the inserted gear
     
     Sub Object: Environment Controls
         Name 3 nouns you'll find on the [Sub Object]
-            1)
-            2)
-            3)
+            1) climate control 
+            2) air conditioning control
+            3) air direction buttons
         Name 3 actions that the [Sub Object] can do:
-            1)
-            2)
-            3)
+            1) controls the temperature in the car
+            2) activates air conditioning
+            3) selects where to direct the air inside the car
 
     Sub Object: Infotainment System
         Name 3 nouns you'll find on the [Sub Object]
-            1)
-            2)
-            3)
+            1) radio button
+            2) CD eject button
+            3) volume knob
         Name 3 actions that the [Sub Object] can do:
-            1)
-            2)
-            3)
+            1) powers on the radio
+            2) ejects the actual CD in the reader
+            3) adjusts the volume during playback
 
     Sub Object: Seat 
         Name 3 nouns you'll find on the [Sub Object]
-            1)
-            2)
-            3)
+            1) car headrest
+            2) car armrest
+            3) backrest
         Name 2 actions that the [Sub Object] can do:
-            1)
-            2)
+            1) adjusts the head position while driving
+            2) adjusts the back inclination while driving
 */
 
 /*
@@ -196,53 +196,6 @@ Part 1b - Step 2: Assignment
         c) pick properties that can eventually be represented with 
         'int float double bool char std::string'.
 
-Thing 1)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
-
-Thing 2)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
-
-Thing 3)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
-
-Thing 4)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
 */
 
 /*
@@ -337,17 +290,6 @@ Define an object that is made of 5 sub-objects.
     These 5 sub-objects will not be defined using Primitives, but instead will be their own UDTs 
     you'll define these 5 sub-objects in Part 1d.
 
-Thing 10)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
  */
 
  /*
@@ -434,65 +376,6 @@ example:
     You will need to provide 5 properties and 3 member functions of that Engine object in plain English.
     Remember to pick properties that can be represented with 'int float double bool char std::string'.
 
-Thing 5)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
-
-Thing 6)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
-
-Thing 7)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
-
-Thing 8)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
-
-Thing 9)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
  */
 
 /*
@@ -545,12 +428,20 @@ MOVE THEM to the space below this block comment and put them in numerical order
     simply CUT and PASTE them in the space provided below:
 */
 
+/*
 
-
-
-
-
-
+Thing 1) Music Festival
+5 properties:
+    1) number of sold tickets (int)
+    2) number of artists (int)
+    3) duration in days for the festival (int)
+    4) concert average duration (float)
+    5) water cost (double)
+3 things it can do:
+    1) check the ticket type
+    2) announce next artist
+    3) reserve a parking spot
+*/
 
 /*
 =================
@@ -1010,7 +901,375 @@ Part 1e - Step 19: Request a review
 paste your code below
 */
 
+struct MusicFestival
+{
+    //5 properties:
+    //    1) number of sold tickets (int)
+    int soldTickets = 10000;
+    //    2) number of artists (int)
+    int numberOfArtists = 12;
+    //    3) duration in days for the festival (int)
+    int numberOfFestivalDays = 3;
+    //    4) concert average duration (float)
+    float averageConcertsDuration = 8.5f;
+    //    5) water cost (double)
+    double waterCost = 4.5;
+    //3 things it can do:
+    //    1) check the ticket type
+    void checkTicketType();
+    //    2) announce next artist
+    void announceNextArtist(std::string currentArtist); // this parameters is used to check inside an inner list of artists
+    //    3) reserve a parking spot
+    int reserveParkingSpot(float payment);
+    // the payment is needed to calculate the duration for the parking spot. The function returns this duration in minutes.
+};
 
+/*
+Thing 2) Digital Audio Workstation
+5 properties:
+    1) volume value (float)
+    2) number of tracks (int)
+    3) panning value (double)
+    4) type of track (std::string)
+    5) cost for the software (double)
+3 things it can do:
+    1) add a new track
+    2) increase volume of tracks
+    3) solos a given track
+*/
+struct DigitalAudioWorkstation
+{
+    //5 properties:
+    //    1) volume value (float)
+    float volumeValue = 3.5f;
+    //    2) number of tracks (int)
+    int numberOfTracks = 1;
+    //    3) panning value (double)
+    double panValue = 0.0;
+    //    4) type of track (std::string)
+    std::string trackType = "midi";
+    //    5) cost for the software (double)
+    double softwareCost = 299.99;
+
+    struct TrackSlot
+    {
+        bool isTrackPaused = true;
+        std::string actualTimelinePoint = "00h:00m:00s";
+        double gainValue = 1.0;
+        double skipTimeValue = 0.5;
+        bool isIsolated = false;
+
+        void setLoopRange(std::string startTime = "00h::01m::34s", std::string endTime = "00h::01m::40s"); // set the range for the loop
+        void recordTrack(std::string startTime = "00h::00m::00s"); //record a track from a give start time value.
+        double changeGain(double actualGainValue, double addingValue = 0.5); // change the actualGainValue by adding an addingValue. It returns the updated gain. 
+    };
+    //3 things it can do:
+    //    1) add a new track
+    void addNewTrack(int trackType, TrackSlot trackSlot); // trackType could range from 0 to whatever number to select the type of track (audio, midi, ecc..). You give to the function a new trackSlot with all its characteristics.
+    //    2) increase volume of tracks
+    float increaseTracksVolume(int newVolumeValue); // returns the updated volumeValue
+    //    3) solos a given track
+    bool soloTrack(int trackNumber, TrackSlot trackSlot); // uses the track number as parameter to isolate it and the trackSlot to set the isIsolated value to true/false. It returns true/false if it has been isolated
+};
+
+/*
+Thing 3) Train station
+5 properties:
+    1) number of rails (int)
+    2) number of trains per day (int)
+    3) travelers rate (double)
+    4) number of intercity trains (int)
+    5) number of national trains (int)
+3 things it can do:
+    1) check trains' arrivals
+    2) announce delays
+    3) control travelers access
+*/
+struct TrainStation
+{
+    //5 properties:
+    //    1) number of rails (int)
+    int numberOfRails = 20;
+    //    2) number of trains per day (int)
+    int trainsPerDay = 200; 
+    //    3) travelers rate (double)
+    double travelersRate = 80.2;
+    //    4) number of intercity trains (int)
+    int numberOfIntercityTrains = 10;
+    //    5) number of national trains (int)
+    int numberOfNationalTrains = 10;
+
+    struct Train
+    {
+        int numberOfWagons = 12;
+        int numberOfSeats = 120;
+        int trainId = 123;
+        bool hasArrived = false;
+        float fuelPercentage = 100.0f;
+
+        void leaveStation(float fuelPercentage, bool setAutoPilot = false); // Function to indicate that the train has to leave the station. It accepts fuelPercentage parameter to check that it can actually leave and if it need to turn the Autopilot on. 
+        double computeMilesTraveledPerDay(std::string day); // return the mailes traveled in a given day
+        void openTheDoors(float velocity = 100.0f); // open the doors given a certain velocity (hopefully 0).     
+        
+    };
+    //3 things it can do:
+    //    1) check trains' arrivals
+    void checkTrainsArrivals(Train train);
+    //    2) announce delays
+    void announceDelays(int trainId, int delayMinutesAmount, Train train); // parameters to select the train and its delay in minutes
+    //    3) control travelers access
+    bool controlTravelersAccess(int ticketId); // based on ticketId, return true if the traveler payed it so that can access the trainStation 
+};
+
+/*
+Thing 4) Notebook
+5 properties:
+    1) ram size (int)
+    2) graphic card size (int)
+    3) number of CPU cores (int)
+    4) model name (std::string)
+    5) number of USB ports (int)
+3 things it can do:
+    1) run newest videogames
+    2) connect to the internet
+    3) auto update
+*/
+struct Notebook
+{
+    //5 properties:
+    //    1) ram size (int)
+    int ramSize = 4096;
+    //    2) graphic card size (int)
+    int graphicCardSize = 2048;
+    //    3) number of CPU cores (int)
+    int numberOfCpuCores = 4;
+    //    4) model name (std::string)
+    std::string modelName = "Lenovo ThinkPad";
+    //    5) number of USB ports (int)
+    int numberOfUsbPorts = 3;
+    //3 things it can do:
+    //    1) run newest videogames
+    void runNewestVideogames(bool minimumRequirementsChecked); // run the videogame upon minimumRequirementsChecked value
+    //    2) connect to internet
+    bool connectToInternet(std::string networkName, std::string password); // return true if the password for the given network name is correct
+    //    3) auto update
+    void autoUpdate();
+};
+
+/*
+Thing 5) HandleBar
+5 properties:
+    1) material (std::string)
+    2) number of breaks (int)
+    3) speed indicator in Km/h (int)
+    4) fuel indicator in percentage (int)
+    5) hour indicator (std::string)
+3 things it can do:
+    1) accelerate
+    2) decelerate
+    3) steer
+*/
+struct HandleBar
+{
+    //5 properties:
+    //    1) material (std::string)
+    std::string material = "plastic";
+    //    2) number of breaks (int)
+    int numberOfBreaks = 2;
+    //    3) speed indicator in Km/h (int)
+    int speedIndication = 0;
+    //    4) fuel indicator in percentage (int)
+    int fuelPercentage = 50;
+    //    5) hour indicator (std::string)
+    std::string hourIndication = "00:00:00";
+    //3 things it can do:
+    //    1) accelerate
+    int accelerate(int accelerationAmount); // return an updated speedIndication value given an acceleration amount as parameter
+    //    2) decelerate
+    int decelerate(int decelerationAmount); // return an updated speedIndication value given decelerationAmount as parameter
+    //    3) steer
+    void steer(std::string direction); // steer based on direction that could be for example right or left
+};
+
+/*
+Thing 6) Wheel
+5 properties:
+    1) material (std::string)
+    2) wheel rim type (std::string)
+    3) maximum pressure in bar (float)
+    4) colour (std::string)
+    5) percentage of wear (float)
+3 things it can do:
+    1) loose pressure
+    2) bounce
+    3) spin
+*/
+struct Wheel
+{
+    //5 properties:
+    //    1) material (std::string)
+    std::string material = "rubber";
+    //    2) wheel rim type (std::string)
+    std::string rimType = "aluminum";
+    //    3) maximum pressure in bar (float)
+    float maxBarPressure = 6.2f;
+    //    4) colour (std::string)
+    std::string colour = "black";
+    //    5) percentage of wear (float)
+    float wearPercentage = 0.0f;
+    //3 things it can do:
+    //    1) loose pressure
+    void loosePressure(float pressureAmount); // loose pressure of a given pressure amount
+    //    2) bounce
+    void bounce();
+    //    3) spin
+    void spin(int revolutionsPerMinute); // set the revolution per minute to make the wheel spinning
+};
+
+/*
+Thing 7) Seat
+5 properties:
+    1) material (std::string)
+    2) shape (std::string)
+    3) number (int)
+    4) colour (std::string)
+    5) percentage of cushioning (float)
+3 things it can do:
+    1) absorb vibrations
+    2) it can warm the seating
+    3) comfort driver
+*/
+struct Seat
+{
+    //5 properties:
+    //    1) material (std::string)
+    std::string material = "leather";
+    //    2) shape (std::string)
+    std::string shape = "rounded";
+    //    3) number (int)
+    int numberOfSeats = 1;
+    //    4) colour (std::string)
+    std::string colour = "black";
+    //    5) percentage of cushioning (float)
+    float cushioningPercentage = 90.0f;
+    //3 things it can do:
+    //    1) absorb vibrations
+    void absorbVibrations();
+    //    2) it can warm the seating
+    bool isWarmingTheSeating(); // return true if the seat is warming the seating
+    //    3) comfort driver   
+    void comfortDriver();
+};
+
+/*
+Thing 8) Light
+5 properties:
+    1) wattage (float)
+    2) brightness percentage (double)
+    3) colour (std::string)
+    4) light anglulation in degrees (int)
+    5) type of light (std::string)
+3 things it can do:
+    1) illuminate street
+    2) alert people
+    3) indicate change of direction
+*/
+struct Light
+{
+    //5 properties:
+    //    1) wattage (float)
+    float wattage = 60.0f;
+    //    2) brightness percentage (double)
+    double brightnessPercentage = 80.5;
+    //    3) colour (std::string)
+    std::string colour = "white";
+    //    4) light anglulation in degrees (int)
+    int degreesAngulation = 90;
+    //    5) type of light (std::string)
+    std::string type = "halogen";
+    //3 things it can do:
+    //    1) illuminate street
+    double illuminateStreet(double brightnessAmount); // Based upon the brightness amount, it returns the updated brightness percentage
+    //    2) alert people
+    void alertPeople();
+    //    3) indicate change of direction
+    std::string indicateChangeOfDirection(int direction); // direction could be 1 or 2 to indicate left or right. It returns the direction as a string.
+};
+
+/*
+Thing 9) Case
+5 properties:
+    1) shape (std::string)
+    2) colour (std::string)
+    3) material (std::string)
+    4) maximum load in Kg (float)
+    5) volume (float)
+3 things it can do:
+    1) carry objects
+    2) support passenger
+    3) reflect lights
+*/
+struct Case
+{
+    //5 properties:
+    //    1) shape (std::string)
+    std::string shape = "squared";
+    //    2) colour (std::string)
+    std::string colour = "red";
+    //    3) material (std::string)
+    std::string material = "plastic";
+    //    4) maximum load in Kg (float)
+    float maximumKgLoad = 2.8f;
+    //    5) volume in litres (float)
+    float volumeInLitres = 46.2f;
+    //3 things it can do:
+    //    1) carry objects
+    void carryObjects(std::string objectName); // the case internally stores the object passed as a string parameter
+    //    2) support passenger
+    void supportPassenger();
+    //    3) reflect lights
+    void reflectLights();
+};
+
+/*
+Thing 10) Scooter
+5 properties:
+    1) HandleBar
+    2) Wheel
+    3) Seat
+    4) Light
+    5) Case
+3 things it can do:
+    1) accelerate
+    2) decelerate
+    3) steer
+*/
+struct Scooter
+{
+    //5 properties:
+    //    1) HandleBar
+    //a member variabledeclaration of an instance of UDT 5
+    HandleBar handleBar;
+    //    2) Wheel
+    //a member variabledeclaration of an instance of UDT 6
+    Wheel wheel;
+    //    3) Seat
+    //a member variabledeclaration of an instance of UDT 7
+    Seat seat;
+    //    4) Light
+    //a member variabledeclaration of an instance of UDT 8
+    Light light;
+    //    5) Case
+    //a member variabledeclaration of an instance of UDT 9
+    Case scooterCase; //cannot use "case" as object name
+    //3 things it can do:
+    //    1) accelerate
+    int accelerate(int accelerationAmount); // returns the updated speed based on the accelerationAmount parameter
+    //    2) decelerate
+    int decelerate(int decelerationAmount); // returns the updated speed based on the decelerationAmount parameter
+    //    3) steer
+    void steer(std::string direction); // steer based on direction that could be for example right or left
+};
 
 
 
